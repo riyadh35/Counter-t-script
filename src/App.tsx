@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Counter from './components/Counter';
+import Users from './components/Users';
+
+
+
+
+
+let student: string = 'Riyad';
+let age: number = 22;
+let isSmart: boolean = false;
+
+
+let students: string[] = ['joe', 'Biden', 'Harris'];
+let fees: number[] = [12, 45, 79, 12, 45];
+
+interface Person {
+  name: string;
+  job?: string;
+  employed: boolean | number;
+  age: number;
+  location?: string | number;
+}
+
+
+const person: Person = {
+  name: 'Jhankar ',
+  employed: true,
+  age: 85,
+  location: 55,
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Counter></Counter>
+      <Users></Users>
     </div>
   );
 }
